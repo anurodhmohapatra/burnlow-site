@@ -197,7 +197,7 @@ input[type="range"] { width: 100%; accent-color: var(--ember); }
   .steps { grid-template-columns: 1fr 1fr; }
   .hero { padding: 56px 0 56px; }
 }
-@media (max-width: 760px) {
+@media (min-width: 761px) and (max-width: 960px) {\n  .price { font-size: clamp(1.4rem, 2.1vw, 1.75rem); white-space: nowrap; }\n}\n@media (max-width: 760px) {
   .nav-toggle { display: block; }
   .site-nav { position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--bg); border-bottom: 1px solid var(--line); padding: 8px 24px 20px; display: none; }
   .site-nav.open { display: flex; }
