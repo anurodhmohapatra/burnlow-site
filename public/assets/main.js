@@ -2,8 +2,6 @@
   "use strict";
 
   const CONTACT_EMAIL = "hello@burnlow.in";
-  const SPRINT_FEE = 85000;
-  const MIN_SENSIBLE_SPEND = 300000;
 
   // Mobile navigation
   const toggle = document.querySelector(".nav-toggle");
