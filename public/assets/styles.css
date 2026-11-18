@@ -122,7 +122,8 @@ input[type="range"] { width: 100%; accent-color: var(--ember); }
 .calc-row strong { font-size: 1.5rem; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
 .calc-verdict { margin: 18px 0 6px; font-weight: 600; color: var(--cool); }
 .calc-verdict.warn { color: #b45309; }
-.calc-note { font-size: .82rem; color: var(--muted); margin: 0; }
+.calc-note { font-size: .82rem; color: var(--muted); margin: 0; line-height: 1.5; }
+.calc-result .calc-row strong { text-align: right; }
 
 /* Pricing */
 .pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 12px; align-items: stretch; }

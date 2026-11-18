@@ -65,7 +65,7 @@
         <div class="hero-copy">
           <p class="eyebrow">Databricks cost &amp; performance</p>
           <h1>Lower burn,<br><span class="ember">same pipelines.</span></h1>
-          <p class="lead">A fixed-fee Savings Sprint for teams running Databricks. We find where your DBUs are leaking, hand your engineers ready-to-run fixes, and re-measure 30 days later.</p>
+          <p class="lead">A fixed-fee Databricks Savings Sprint. We analyse billing, job and compute configuration to identify measurable cost and performance opportunities. Your engineers review and implement the changes; we help verify the impact.</p>
           <div class="cta-row">
             <a class="btn" href="#contact">Book a 20-minute fit call</a>
             <a class="btn btn-ghost" href="#calculator">Estimate your savings</a>
@@ -73,7 +73,7 @@
           <ul class="assurances">
             <li>Read-only access</li>
             <li>Your team ships the changes</li>
-            <li>50% back if savings are under 3× the fee</li>
+            <li>Savings measured against an agreed baseline</li>
           </ul>
         </div>
 
@@ -101,28 +101,28 @@
         <p class="section-lead">Most of the waste isn't exotic. It's sensible defaults applied to the wrong workloads, and nobody owning the bill.</p>
         <div class="grid-3">
           <article class="card">
-            <h3>Photon where it doesn't pay</h3>
-            <p>Photon is on by default and bills at a higher DBU rate. On light or I/O-bound jobs, you pay more without going faster.</p>
+            <h3>Photon configuration</h3>
+            <p>Photon can improve performance, but the cost/performance trade-off varies by workload. We benchmark eligible workloads rather than recommending a blanket on/off setting.</p>
           </article>
           <article class="card">
-            <h3>Production jobs on interactive compute</h3>
-            <p>All-purpose clusters cost more per DBU than jobs compute, and it's easy to schedule pipelines on them by accident.</p>
+            <h3>Job and interactive compute</h3>
+            <p>We check whether scheduled workloads use an appropriate compute type and configuration for their runtime, concurrency and operational requirements.</p>
           </article>
           <article class="card">
-            <h3>Oversized and idle clusters</h3>
-            <p>Sized for last year's peak, missing auto-termination, or running on-demand where spot workers would do.</p>
+            <h3>Cluster sizing and idle time</h3>
+            <p>We look for over-provisioning, low utilisation, long idle periods and auto-termination settings that may be increasing spend.</p>
           </article>
           <article class="card">
-            <h3>Serverless without guardrails</h3>
-            <p>Serverless is convenient. Without usage policies and budgets, it's also where runaway spend hides.</p>
+            <h3>Serverless usage controls</h3>
+            <p>We review workload policies, budgets and usage patterns to identify where guardrails or configuration changes may be warranted.</p>
           </article>
           <article class="card">
-            <h3>Spend nobody owns</h3>
-            <p>Without tags and attribution, no one can say which team or pipeline is driving the bill, so nothing changes.</p>
+            <h3>Cost attribution</h3>
+            <p>We check whether tags and available system-table metadata make spend attributable to teams, jobs and environments.</p>
           </article>
           <article class="card card-dark">
             <h3>What we won't charge you for</h3>
-            <p>Databricks now automates table maintenance and ships budgets and cost dashboards for free. We focus on the decisions a tool can't make for you.</p>
+            <p>We won't repackage built-in platform dashboards as consulting. The sprint focuses on interpreting your workload and cost data, prioritising changes, and helping your team validate the result.</p>
           </article>
         </div>
       </div>
@@ -136,12 +136,12 @@
           <p class="section-lead">A report alone doesn't lower a bill. Every sprint ends with changes your engineers can review and ship.</p>
         </div>
         <ol class="deliverables">
-          <li><strong>Cost map.</strong> Where every rupee goes, by workspace, team, job and compute type.</li>
-          <li><strong>Ranked waste list.</strong> Each finding with its estimated monthly impact, effort and risk.</li>
-          <li><strong>Ready-to-run changes.</strong> Cluster policies, job configs and code diffs for your top 5–10 workloads, reviewed and documented.</li>
-          <li><strong>Change plan.</strong> Sequenced so your team can ship safely under your own change controls.</li>
-          <li><strong>30-day re-measure.</strong> Before-and-after comparison on your own billing data.</li>
-          <li><strong>One-page summary.</strong> For your CFO or founder, in rupees.</li>
+          <li><strong>Cost map.</strong> Spend by workspace, team, job and compute type, to the extent supported by available billing and system-table metadata.</li>
+          <li><strong>Ranked opportunities.</strong> Findings ranked by estimated impact, implementation effort, operational risk and confidence.</li>
+          <li><strong>Engineering changes.</strong> Proposed configuration changes, code/config examples and implementation notes for the agreed priority workloads.</li>
+          <li><strong>Change plan.</strong> A sequenced plan for your team to review and execute under its own change controls.</li>
+          <li><strong>30-day validation.</strong> A before-and-after comparison using an agreed measurement method and comparable workloads.</li>
+          <li><strong>Executive summary.</strong> A concise summary of findings, assumptions, actions and measured impact.</li>
         </ol>
       </div>
     </section>
@@ -179,21 +179,28 @@
       <div class="wrap calc">
         <div>
           <p class="eyebrow">Savings estimate</p>
-          <h2>Will a sprint pay back for you?</h2>
-          <p class="section-lead">Enter your monthly Databricks spend and an assumed reduction. We'll give you a realistic range after the fit call.</p>
+          <h2>Explore a savings scenario</h2>
+          <p class="section-lead">Enter your monthly Databricks spend and an assumed reduction. This is a scenario calculator, not a forecast.</p>
           <form class="calc-form" id="calc-form" novalidate>
             <label for="spend">Monthly Databricks spend (₹)</label>
             <input id="spend" name="spend" type="number" inputmode="numeric" min="0" step="10000" value="500000">
-            <label for="pct">Assumed reduction: <output id="pct-out" for="pct">15%</output></label>
+            <label for="pct">Assumed monthly reduction: <output id="pct-out" for="pct">15%</output></label>
             <input id="pct" name="pct" type="range" min="5" max="30" step="1" value="15">
+            <label for="sprint-fee">Sprint fee</label>
+            <select id="sprint-fee" name="sprint-fee">
+              <option value="60000">Pilot Sprint — ₹60,000</option>
+              <option value="85000" selected>Savings Sprint — ₹85,000</option>
+              <option value="125000">Larger scope — ₹1,25,000</option>
+            </select>
           </form>
         </div>
         <div class="calc-result" aria-live="polite">
-          <div class="calc-row"><span>Monthly saving</span><strong id="r-month">₹75,000</strong></div>
-          <div class="calc-row"><span>Saving over 12 months</span><strong id="r-year">₹9,00,000</strong></div>
-          <div class="calc-row"><span>Return on an ₹85,000 sprint</span><strong id="r-roi">10.6×</strong></div>
-          <p class="calc-verdict" id="r-verdict">A sprint is likely to pay back comfortably.</p>
-          <p class="calc-note">Illustrative only. Actual savings depend on your workloads.</p>
+          <div class="calc-row"><span>Estimated monthly savings</span><strong id="r-month">₹75,000</strong></div>
+          <div class="calc-row"><span>Annualised savings run-rate</span><strong id="r-year">₹9,00,000</strong></div>
+          <div class="calc-row"><span>Annualised savings / sprint fee</span><strong id="r-multiple">10.6×</strong></div>
+          <div class="calc-row"><span>Illustrative net ROI</span><strong id="r-roi">959%</strong></div>
+          <p class="calc-verdict" id="r-verdict">Under these assumptions, annualised savings exceed the sprint fee. This is not a guarantee.</p>
+          <p class="calc-note">Illustrative scenario only, not a forecast or savings commitment. Assumes the estimated monthly reduction is achieved and continues for 12 months. Actual results depend on workload mix, implementation, usage changes and measurement conditions. Excludes taxes and internal implementation costs.</p>
         </div>
       </div>
     </section>
@@ -239,8 +246,9 @@
           </article>
         </div>
         <div class="guarantee">
-          <strong>The guarantee:</strong> if verified savings over 12 months come to less than 3× the sprint fee, we refund 50% of it.
+          <strong>Savings measurement commitment:</strong> Before the sprint begins, we agree in writing on the baseline period, eligible workloads, measurement method and assumptions. After your team implements the agreed changes, we compare a representative 30-day measurement period with that baseline, adjusting for material changes in workload volume or operating conditions where the agreed method allows. The 12-month figure is an annualised run-rate based on verified monthly savings; it is not a promise that savings will remain constant for 12 months. If the verified annualised savings run-rate is less than three times the sprint fee, we refund 50% of the sprint fee, subject to the agreed measurement conditions.
         </div>
+        <p class="fine">The engagement agreement must define the baseline, eligible workloads, measurement method, implementation deadline, exclusions and validation process before this commitment applies.</p>
         <p class="fine">50% at kickoff, 50% on delivery. Prices exclude taxes, if applicable. International teams are billed in USD.</p>
       </div>
     </section>
@@ -288,8 +296,8 @@
       <div class="wrap about">
         <p class="eyebrow">About</p>
         <h2>An independent practice</h2>
-        <p>Burnlow is run by a Bengaluru-based senior data engineer with 7+ years building and running data platforms on Databricks, Spark, Azure and AWS. You work directly with the engineer doing the analysis.</p>
-        <p>We don't resell licences or earn commissions from any vendor. Our only incentive is your bill going down.</p>
+        <p>Burnlow is an independent practice led by a senior data engineer with 7+ years of experience building and operating data platforms with Databricks, Spark, Azure and AWS. You work directly with the engineer carrying out the assessment.</p>
+        <p>Burnlow does not resell licences or take vendor commissions. Recommendations are based on the client's workloads, constraints and cost data.</p>
       </div>
     </section>
 
@@ -303,7 +311,15 @@
         </details>
         <details>
           <summary>How much can we expect to save?</summary>
-          <p>It depends on your workloads, so we won't quote a number before looking. After the fit call we'll give you a realistic range, and the guarantee protects you if the result falls short.</p>
+          <p>We won't quote a percentage before reviewing your workload and billing data. The calculator is an illustrative scenario, not a forecast. After the fit call, we'll tell you whether a deeper assessment is likely to be worthwhile.</p>
+        </details>
+        <details>
+          <summary>How are savings measured?</summary>
+          <p>Before work begins, we agree on a baseline, eligible workloads and a measurement method. After your team implements the agreed changes, we compare a representative 30-day period and document material differences or limitations. Any annualised figure is a run-rate estimate, not a promise of 12 months of identical savings.</p>
+        </details>
+        <details>
+          <summary>Does the sprint guarantee savings?</summary>
+          <p>The engagement includes a 50% fee-refund commitment if verified annualised savings run-rate is below three times the sprint fee, subject to the baseline, implementation and measurement conditions agreed in writing before the sprint.</p>
         </details>
         <details>
           <summary>How long does it take?</summary>
@@ -311,7 +327,7 @@
         </details>
         <details>
           <summary>Who implements the changes?</summary>
-          <p>Your engineers, using our ready-to-run changes and change plan. If you want hands-on help, implementation projects are available at a fixed price.</p>
+          <p>Your engineers approve and implement changes under your own controls. The sprint provides prioritised recommendations, implementation notes and review support; production changes are not made by Burnlow.</p>
         </details>
         <details>
           <summary>Are you a Databricks partner?</summary>
@@ -336,8 +352,8 @@
       <div class="wrap contact">
         <div>
           <p class="eyebrow eyebrow-light">Contact</p>
-          <h2>Book a 20-minute fit call</h2>
-          <p class="section-lead">Tell us roughly what you spend and what you run. We'll reply within two working days with a few times that suit you.</p>
+          <h2>Start with a 20-minute fit call</h2>
+          <p class="section-lead">Share your work email, company and approximate Databricks spend. We'll review the fit and reply within two working days with suggested times.</p>
           <p class="contact-direct">Or email <a href="mailto:hello@burnlow.in">hello@burnlow.in</a></p>
         </div>
         <form class="contact-form" id="contact-form" novalidate>
@@ -357,8 +373,8 @@
           </select>
           <label for="c-msg">What's going on? (optional)</label>
           <textarea id="c-msg" name="message" rows="4"></textarea>
-          <button class="btn" type="submit">Send via email</button>
-          <p class="form-note" id="form-note">This opens your email app with the details filled in. Nothing is stored on this site.</p>
+          <button class="btn" type="submit">Prepare enquiry email</button>
+          <p class="form-note" id="form-note">This form opens your default email app with your details pre-filled. It does not submit or store an enquiry on this website. If your email app does not open, write to hello@burnlow.in.</p>
         </form>
       </div>
     </section>

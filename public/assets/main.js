@@ -2,8 +2,6 @@
   "use strict";
 
   const CONTACT_EMAIL = "hello@burnlow.in";
-  const SPRINT_FEE = 85000;
-  const MIN_SENSIBLE_SPEND = 300000;
 
   // Mobile navigation
   const toggle = document.querySelector(".nav-toggle");
@@ -21,42 +19,54 @@
     });
   }
 
-  // Savings calculator
-  const inr = new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 });
+  // Savings calculator — scenario estimate, not a savings forecast
+  const inr = new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0
+  });
+
   const spendEl = document.getElementById("spend");
   const pctEl = document.getElementById("pct");
   const pctOut = document.getElementById("pct-out");
+  const feeEl = document.getElementById("sprint-fee");
   const rMonth = document.getElementById("r-month");
   const rYear = document.getElementById("r-year");
+  const rMultiple = document.getElementById("r-multiple");
   const rRoi = document.getElementById("r-roi");
   const rVerdict = document.getElementById("r-verdict");
 
   function updateCalc() {
+    if (!spendEl || !pctEl || !feeEl) return;
     const spend = Math.max(0, Number(spendEl.value) || 0);
     const pct = Number(pctEl.value) / 100;
+    const fee = Math.max(1, Number(feeEl.value) || 85000);
     const monthly = spend * pct;
-    const yearly = monthly * 12;
-    const roi = yearly / SPRINT_FEE;
+    const annualised = monthly * 12;
+    const multiple = annualised / fee;
+    const netRoi = ((annualised - fee) / fee) * 100;
 
     pctOut.textContent = Math.round(pct * 100) + "%";
     rMonth.textContent = inr.format(monthly);
-    rYear.textContent = inr.format(yearly);
-    rRoi.textContent = roi.toFixed(1) + "×";
+    rYear.textContent = inr.format(annualised);
+    rMultiple.textContent = multiple.toFixed(1) + "×";
+    rRoi.textContent = netRoi.toFixed(0) + "%";
 
     rVerdict.classList.remove("warn");
-    if (spend === 0) {
-      rVerdict.textContent = "Enter your monthly spend to see an estimate.";
-    } else if (spend < MIN_SENSIBLE_SPEND || roi < 3) {
-      rVerdict.textContent = "A sprint may not pay back yet. Start with Databricks' built-in budgets and cost dashboards.";
+    if (spend <= 0) {
+      rVerdict.textContent = "Enter your monthly spend to see an illustrative scenario.";
+    } else if (annualised < fee) {
+      rVerdict.textContent = "Under these assumptions, annualised savings are below the sprint fee.";
       rVerdict.classList.add("warn");
     } else {
-      rVerdict.textContent = "A sprint is likely to pay back comfortably.";
+      rVerdict.textContent = "Under these assumptions, annualised savings exceed the sprint fee. This is not a guarantee.";
     }
   }
 
-  if (spendEl && pctEl) {
+  if (spendEl && pctEl && feeEl) {
     spendEl.addEventListener("input", updateCalc);
     pctEl.addEventListener("input", updateCalc);
+    feeEl.addEventListener("change", updateCalc);
     updateCalc();
   }
 
