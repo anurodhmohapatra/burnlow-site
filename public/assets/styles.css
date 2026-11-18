@@ -191,7 +191,9 @@ input[type="range"] { width: 100%; accent-color: var(--ember); }
 /* Responsive */
 @media (max-width: 960px) {
   .hero-grid, .split, .calc, .contact { grid-template-columns: 1fr; gap: 40px; }
-  .grid-3, .pricing { grid-template-columns: 1fr 1fr; }
+  .grid-3 { grid-template-columns: 1fr 1fr; }
+  .pricing { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .price-card { padding: 20px; }
   .steps { grid-template-columns: 1fr 1fr; }
   .hero { padding: 56px 0 56px; }
 }
