@@ -33,7 +33,6 @@
   const rMonth = document.getElementById("r-month");
   const rYear = document.getElementById("r-year");
   const rMultiple = document.getElementById("r-multiple");
-  const rRoi = document.getElementById("r-roi");
   const rVerdict = document.getElementById("r-verdict");
 
   function updateCalc() {
@@ -44,22 +43,23 @@
     const monthly = spend * pct;
     const annualised = monthly * 12;
     const multiple = annualised / fee;
-    const netRoi = ((annualised - fee) / fee) * 100;
 
     pctOut.textContent = Math.round(pct * 100) + "%";
     rMonth.textContent = inr.format(monthly);
     rYear.textContent = inr.format(annualised);
     rMultiple.textContent = multiple.toFixed(1) + "×";
-    rRoi.textContent = netRoi.toFixed(0) + "%";
 
     rVerdict.classList.remove("warn");
     if (spend <= 0) {
       rVerdict.textContent = "Enter your monthly spend to see an illustrative scenario.";
-    } else if (annualised < fee) {
-      rVerdict.textContent = "Under these assumptions, annualised savings are below the sprint fee.";
+    } else if (multiple < 1) {
+      rVerdict.textContent = "Under these assumptions, annualised savings won't pay back the sprint fee.";
+      rVerdict.classList.add("warn");
+    } else if (multiple < 3) {
+      rVerdict.textContent = "This scenario pays back the sprint fee, but is below our 3× refund threshold. Talk to us before proceeding.";
       rVerdict.classList.add("warn");
     } else {
-      rVerdict.textContent = "Under these assumptions, annualised savings exceed the sprint fee. This is not a guarantee.";
+      rVerdict.textContent = "At 3× or more, this scenario is likely worthwhile enough to discuss. It is not a guarantee.";
     }
   }
 
