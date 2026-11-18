@@ -1,29 +1,392 @@
 <!doctype html>
 <html lang="en-IN">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Burnlow · Databricks cost &amp; performance sprints</title>
-<meta name="description" content="A fixed-fee Databricks Savings Sprint for Indian teams. Find where your DBUs leak, get ready-to-run fixes, and re-measure in 30 days. 50% back if savings are under 3× the fee.">
-<link rel="canonical" href="https://burnlow.in/"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/styles.css"><meta name="theme-color" content="#111827">
-<meta property="og:type" content="website"><meta property="og:site_name" content="Burnlow"><meta property="og:url" content="https://burnlow.in/">
-<meta property="og:title" content="Burnlow · Lower burn, same pipelines."><meta property="og:description" content="Fixed-fee Databricks Savings Sprints for Indian startups and scale-ups.">
-<meta name="twitter:card" content="summary_large_image">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Burnlow · Databricks cost &amp; performance sprints</title>
+  <meta name="description" content="A fixed-fee Databricks Savings Sprint for Indian teams. Find where your DBUs leak, get ready-to-run fixes, and re-measure in 30 days. 50% back if savings are under 3× the fee.">
+  <link rel="canonical" href="https://burnlow.in/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#111827">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Burnlow">
+  <meta property="og:url" content="https://burnlow.in/">
+  <meta property="og:title" content="Burnlow · Lower burn, same pipelines.">
+  <meta property="og:description" content="Fixed-fee Databricks Savings Sprints for Indian startups and scale-ups. Read-only access, ready-to-run fixes, 30-day re-measure.">
+  <meta property="og:image" content="https://burnlow.in/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Burnlow",
+    "url": "https://burnlow.in/",
+    "email": "hello@burnlow.in",
+    "description": "Fixed-fee Databricks cost and performance sprints for Indian startups and scale-ups.",
+    "areaServed": "IN",
+    "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressRegion": "Karnataka", "addressCountry": "IN" },
+    "priceRange": "₹60,000–₹1,25,000"
+  }
+  </script>
 </head>
 <body>
-<header class="header"><div class="wrap nav"><a class="brand" href="./"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#111827"/><path d="M16 4.5c2 4.3 7.4 7.4 7.4 13.6a7.4 7.4 0 0 1-14.8 0c0-3.3 1.8-5.4 3.5-7.1.3 2.1 1.3 3.7 2.9 4.5-.6-4.1-.1-7.7 1-11z" fill="#f97316"/><path d="M16 15.2v7.2m-3-3 3 3 3-3" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> burnlow</a><nav><a href="#how">How it works</a><a href="#fixes">What we fix</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="button small" href="#contact">Book a fit call</a></nav></div></header>
-<main>
-<section class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">DATABRICKS COST &amp; PERFORMANCE · BENGALURU</p><h1>Lower burn,<br><em>same pipelines.</em></h1><p class="lead">A fixed-fee Savings Sprint for teams running Databricks. We find where your DBUs are leaking, hand your engineers ready-to-run fixes, and re-measure 30 days later.</p><div class="actions"><a class="button" href="#contact">Book a 20-minute fit call</a><a class="button ghost" href="#calculator">Estimate your savings</a></div><ul class="checks"><li>Read-only access</li><li>Your team ships the changes</li><li>50% back if savings are under 3× the fee</li></ul></div><aside class="sample"><div class="sample-head"><b>Sample findings</b><span>SYNTHETIC WORKSPACE</span></div><ol><li><span>Photon on light, I/O-bound ETL jobs</span><b>₹1.1L/mo</b></li><li><span>Scheduled jobs on all-purpose clusters</span><b>₹82k/mo</b></li><li><span>Serverless warehouse with no usage policy</span><b>₹46k/mo</b></li><li><span>Clusters without auto-termination</span><b>₹31k/mo</b></li><li><span>Spend has no owner tag</span><b>Attribution</b></li></ol><small>Illustrative example built on synthetic workloads, not a client result.</small></aside></div></section>
-<section class="section" id="problem"><div class="wrap"><p class="eyebrow">THE PROBLEM</p><h2>Why Databricks bills creep</h2><p class="intro">Most waste isn't exotic. It's sensible defaults applied to the wrong workloads, and nobody owning the bill.</p><div class="cards"><article><h3>Photon where it doesn't pay</h3><p>On light or I/O-bound jobs, you may pay a higher DBU rate without getting faster results.</p></article><article><h3>Production jobs on interactive compute</h3><p>All-purpose clusters can cost more than jobs compute. Pipelines sometimes land on them by accident.</p></article><article><h3>Oversized and idle clusters</h3><p>Clusters sized for last year's peak, missing auto-termination, or running on-demand unnecessarily.</p></article><article><h3>Serverless without guardrails</h3><p>Without usage policies and budgets, convenient serverless compute can hide runaway spend.</p></article><article><h3>Spend nobody owns</h3><p>Without tags and attribution, teams cannot identify which workloads drive the bill.</p></article><article class="dark"><h3>What we won't charge you for</h3><p>Native table maintenance, budgets and cost dashboards. We focus on decisions tools cannot make for you.</p></article></div></div></section>
-<section class="section alt" id="fixes"><div class="wrap split"><div><p class="eyebrow">WHAT YOU GET</p><h2>Fixes, not a findings deck</h2><p class="intro">A report alone doesn't lower a bill. Every sprint ends with changes your engineers can review and ship.</p></div><ol class="deliver"><li><b>Cost map.</b> Spend by workspace, team, job and compute type.</li><li><b>Ranked waste list.</b> Estimated monthly impact, effort and risk for each finding.</li><li><b>Ready-to-run changes.</b> Cluster policies, job configs and code diffs for top workloads.</li><li><b>Change plan.</b> Sequenced for safe delivery under your change controls.</li><li><b>30-day re-measure.</b> Before-and-after comparison on your billing data.</li><li><b>One-page summary.</b> For your CFO or founder, in rupees.</li></ol></div></section>
-<section class="section" id="how"><div class="wrap"><p class="eyebrow">HOW IT WORKS</p><h2>Four steps, about five weeks end to end</h2><div class="steps"><article><b>01</b><h3>Fit call</h3><p>20 minutes, free. We look at your spend and setup and tell you honestly whether a sprint will pay back.</p></article><article><b>02</b><h3>NDA and read-only access</h3><p>Billing, compute and job metadata. No write access, and no customer data needed.</p></article><article><b>03</b><h3>The sprint</h3><p>Two to three weeks of analysis, fixes and a change plan. Async-first, with one review call a week.</p></article><article><b>04</b><h3>Re-measure at day 30</h3><p>We verify the savings on your billing data. The guarantee is settled on this number.</p></article></div></div></section>
-<section class="section alt" id="calculator"><div class="wrap calc"><div><p class="eyebrow">SAVINGS ESTIMATE</p><h2>Will a sprint pay back for you?</h2><p class="intro">Enter monthly Databricks spend and an assumed reduction. This is an estimate, not a forecast.</p></div><div class="calcbox"><label for="spend">Monthly Databricks spend (₹)</label><input id="spend" type="number" min="0" value="500000"><label for="pct">Assumed reduction: <strong id="pct-out">20%</strong></label><input id="pct" type="range" min="5" max="40" step="5" value="20"><div class="metrics"><div><small>Monthly savings</small><b id="monthly">₹1,00,000</b></div><div><small>Annual savings</small><b id="yearly">₹12,00,000</b></div><div><small>Return on ₹85k fee</small><b id="roi">14.1×</b></div></div><p id="verdict" class="verdict">Illustrative only. Actual savings depend on workload and implementation.</p></div></div></section>
-<section class="section" id="pricing"><div class="wrap price"><div><p class="eyebrow">STRAIGHTFORWARD PRICING</p><h2>One sprint. One fixed fee.</h2><p class="intro">A focused engagement for teams spending enough on Databricks for optimization to matter.</p></div><div class="price-card"><small>STANDARD SAVINGS SPRINT</small><h3>₹85,000</h3><p>Fixed scope · 2–3 weeks · 30-day re-measure</p><ul><li>Read-only assessment</li><li>Top 5–10 prioritized workloads</li><li>Ready-to-run recommendations</li><li>Implementation handoff</li><li>30-day savings review</li></ul><div class="guarantee"><b>The guarantee:</b> if verified savings over 12 months come to less than 3× the sprint fee, we refund 50% of it.</div><small>50% at kickoff, 50% on delivery. Prices exclude taxes, if applicable. International teams billed in USD.</small><a class="button" href="#contact">Discuss your workspace</a></div></div></section>
-<section class="section alt" id="faq"><div class="wrap narrow"><p class="eyebrow">FAQ</p><h2>Questions, answered.</h2><details><summary>Do you need production access?</summary><p>No. The assessment uses read-only billing, compute and job metadata. Your team reviews and applies any changes.</p></details><details><summary>Do you work with customer data?</summary><p>No customer or business data is required for the assessment.</p></details><details><summary>What if the savings aren't there?</summary><p>We'll say so during the fit call rather than recommend a sprint that is unlikely to pay back. The guarantee is based on verified savings over 12 months.</p></details><details><summary>How much time does my team need?</summary><p>One fit call, access to agreed metadata, and a weekly review. Your engineers own production changes.</p></details></div></section>
-<section class="section contact" id="contact"><div class="wrap contact-grid"><div><p class="eyebrow">START WITH A CONVERSATION</p><h2>Let's look at your Databricks bill.</h2><p class="intro">Tell us a little about your workspace. We'll arrange a 20-minute fit call.</p><a class="email" href="mailto:hello@burnlow.in">hello@burnlow.in</a></div><form id="contact-form"><label>Name</label><input name="name" required><label>Work email</label><input name="email" type="email" required><label>Company</label><input name="company"><label>Monthly Databricks spend</label><select name="spend"><option>Not sure</option><option>Under ₹3 lakh</option><option>₹3–10 lakh</option><option>₹10–25 lakh</option><option>Over ₹25 lakh</option></select><label>What's going on? (optional)</label><textarea name="message" rows="3"></textarea><button class="button" type="submit">Send via email</button><small id="form-note">Opens your email app. Nothing is stored on this site.</small></form></div></section>
-</main>
-<footer><div class="wrap foot"><div><a class="brand" href="./"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#111827"/><path d="M16 4.5c2 4.3 7.4 7.4 7.4 13.6a7.4 7.4 0 0 1-14.8 0c0-3.3 1.8-5.4 3.5-7.1.3 2.1 1.3 3.7 2.9 4.5-.6-4.1-.1-7.7 1-11z" fill="#f97316"/><path d="M16 15.2v7.2m-3-3 3 3 3-3" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> burnlow</a><p>Lower burn, same pipelines.<br>Bengaluru, India</p></div><div><a href="mailto:hello@burnlow.in">hello@burnlow.in</a><a href="privacy.html">Privacy</a></div></div><div class="wrap legal">© 2026 Burnlow. Databricks is a trademark of Databricks, Inc. Burnlow is independent and not affiliated with or endorsed by Databricks.</div></footer>
-<script>
-(()=>{const $=id=>document.getElementById(id),sp=$('spend'),pct=$('pct');function calc(){let s=Math.max(0,+sp.value||0),p=+pct.value/100,m=s*p,y=m*12;$('pct-out').textContent=pct.value+'%';$('monthly').textContent=new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(m);$('yearly').textContent=new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(y);$('roi').textContent=(y/85000).toFixed(1)+'×';$('verdict').textContent=s===0?'Enter your monthly spend to see an estimate.':s<300000||y/85000<3?'A sprint may not pay back yet. Start with Databricks built-in budgets and cost dashboards.':'Illustrative only. Validate actual opportunity in a fit call.'}sp.addEventListener('input',calc);pct.addEventListener('input',calc);calc();$('contact-form').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.target),n=(d.get('name')||'').trim(),em=(d.get('email')||'').trim();if(!n||!/^\S+@\S+\.\S+$/.test(em)){$('form-note').textContent='Please add your name and a valid work email.';return}const body=['Name: '+n,'Email: '+em,'Company: '+d.get('company'),'Monthly spend: '+d.get('spend'),'',(d.get('message')||'')].join('\n');location.href='mailto:hello@burnlow.in?subject='+encodeURIComponent('Fit call request')+'&body='+encodeURIComponent(body)})})();
-</script>
-</body></html>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./" aria-label="Burnlow home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#111827"/>
+          <path d="M16 4.5c2 4.3 7.4 7.4 7.4 13.6a7.4 7.4 0 0 1-14.8 0c0-3.3 1.8-5.4 3.5-7.1.3 2.1 1.3 3.7 2.9 4.5-.6-4.1-.1-7.7 1-11z" fill="#f97316"/>
+          <path d="M16 15.2v7.2m-3-3 3 3 3-3" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>burnlow</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bar"></span><span class="sr-only">Menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="#how">How it works</a>
+        <a href="#fixes">What we fix</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-sm" href="#contact">Book a fit call</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Databricks cost &amp; performance · Bengaluru</p>
+          <h1>Lower burn,<br><span class="ember">same pipelines.</span></h1>
+          <p class="lead">A fixed-fee Savings Sprint for teams running Databricks. We find where your DBUs are leaking, hand your engineers ready-to-run fixes, and re-measure 30 days later.</p>
+          <div class="cta-row">
+            <a class="btn" href="#contact">Book a 20-minute fit call</a>
+            <a class="btn btn-ghost" href="#calculator">Estimate your savings</a>
+          </div>
+          <ul class="assurances">
+            <li>Read-only access</li>
+            <li>Your team ships the changes</li>
+            <li>50% back if savings are under 3× the fee</li>
+          </ul>
+        </div>
+
+        <aside class="report-card" aria-label="Illustrative sample findings">
+          <div class="report-head">
+            <span class="report-title">Sample findings</span>
+            <span class="tag">Synthetic workspace</span>
+          </div>
+          <ol class="findings">
+            <li><span class="sev sev-high"></span><span class="f-text">Photon on light, I/O-bound ETL jobs</span><span class="f-val">₹1.1L/mo</span></li>
+            <li><span class="sev sev-high"></span><span class="f-text">Scheduled jobs on all-purpose clusters</span><span class="f-val">₹82k/mo</span></li>
+            <li><span class="sev sev-med"></span><span class="f-text">Serverless warehouse with no usage policy</span><span class="f-val">₹46k/mo</span></li>
+            <li><span class="sev sev-med"></span><span class="f-text">4 clusters without auto-termination</span><span class="f-val">₹31k/mo</span></li>
+            <li><span class="sev sev-low"></span><span class="f-text">38% of spend has no owner tag</span><span class="f-val">Attribution</span></li>
+          </ol>
+          <p class="report-note">Illustrative example built on synthetic workloads, not a client result.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="problem">
+      <div class="wrap">
+        <p class="eyebrow">The problem</p>
+        <h2>Why Databricks bills creep</h2>
+        <p class="section-lead">Most of the waste isn't exotic. It's sensible defaults applied to the wrong workloads, and nobody owning the bill.</p>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Photon where it doesn't pay</h3>
+            <p>Photon is on by default and bills at a higher DBU rate. On light or I/O-bound jobs, you pay more without going faster.</p>
+          </article>
+          <article class="card">
+            <h3>Production jobs on interactive compute</h3>
+            <p>All-purpose clusters cost more per DBU than jobs compute, and it's easy to schedule pipelines on them by accident.</p>
+          </article>
+          <article class="card">
+            <h3>Oversized and idle clusters</h3>
+            <p>Sized for last year's peak, missing auto-termination, or running on-demand where spot workers would do.</p>
+          </article>
+          <article class="card">
+            <h3>Serverless without guardrails</h3>
+            <p>Serverless is convenient. Without usage policies and budgets, it's also where runaway spend hides.</p>
+          </article>
+          <article class="card">
+            <h3>Spend nobody owns</h3>
+            <p>Without tags and attribution, no one can say which team or pipeline is driving the bill, so nothing changes.</p>
+          </article>
+          <article class="card card-dark">
+            <h3>What we won't charge you for</h3>
+            <p>Databricks now automates table maintenance and ships budgets and cost dashboards for free. We focus on the decisions a tool can't make for you.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="fixes">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">What you get</p>
+          <h2>Fixes, not a findings deck</h2>
+          <p class="section-lead">A report alone doesn't lower a bill. Every sprint ends with changes your engineers can review and ship.</p>
+        </div>
+        <ol class="deliverables">
+          <li><strong>Cost map.</strong> Where every rupee goes, by workspace, team, job and compute type.</li>
+          <li><strong>Ranked waste list.</strong> Each finding with its estimated monthly impact, effort and risk.</li>
+          <li><strong>Ready-to-run changes.</strong> Cluster policies, job configs and code diffs for your top 5–10 workloads, reviewed and documented.</li>
+          <li><strong>Change plan.</strong> Sequenced so your team can ship safely under your own change controls.</li>
+          <li><strong>30-day re-measure.</strong> Before-and-after comparison on your own billing data.</li>
+          <li><strong>One-page summary.</strong> For your CFO or founder, in rupees.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="wrap">
+        <p class="eyebrow">How it works</p>
+        <h2>Four steps, about five weeks end to end</h2>
+        <ol class="steps">
+          <li>
+            <span class="step-num">1</span>
+            <h3>Fit call</h3>
+            <p>20 minutes, free. We look at your spend and setup and tell you honestly whether a sprint will pay back.</p>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <h3>NDA and read-only access</h3>
+            <p>Billing, compute and job metadata from system tables. No write access, and no customer data needed.</p>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <h3>The sprint</h3>
+            <p>Two to three weeks of analysis, fixes and a change plan. Async-first, with one review call a week.</p>
+          </li>
+          <li>
+            <span class="step-num">4</span>
+            <h3>Re-measure at day 30</h3>
+            <p>We verify the savings on your billing data. The guarantee is settled on this number.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="calculator">
+      <div class="wrap calc">
+        <div>
+          <p class="eyebrow">Savings estimate</p>
+          <h2>Will a sprint pay back for you?</h2>
+          <p class="section-lead">Enter your monthly Databricks spend and an assumed reduction. We'll give you a realistic range after the fit call.</p>
+          <form class="calc-form" id="calc-form" novalidate>
+            <label for="spend">Monthly Databricks spend (₹)</label>
+            <input id="spend" name="spend" type="number" inputmode="numeric" min="0" step="10000" value="500000">
+            <label for="pct">Assumed reduction: <output id="pct-out" for="pct">15%</output></label>
+            <input id="pct" name="pct" type="range" min="5" max="30" step="1" value="15">
+          </form>
+        </div>
+        <div class="calc-result" aria-live="polite">
+          <div class="calc-row"><span>Monthly saving</span><strong id="r-month">₹75,000</strong></div>
+          <div class="calc-row"><span>Saving over 12 months</span><strong id="r-year">₹9,00,000</strong></div>
+          <div class="calc-row"><span>Return on an ₹85,000 sprint</span><strong id="r-roi">10.6×</strong></div>
+          <p class="calc-verdict" id="r-verdict">A sprint is likely to pay back comfortably.</p>
+          <p class="calc-note">Illustrative only. Actual savings depend on your workloads.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="wrap">
+        <p class="eyebrow">Pricing</p>
+        <h2>Fixed fees, agreed before we start</h2>
+        <div class="pricing">
+          <article class="price-card">
+            <h3>Pilot Sprint</h3>
+            <p class="price">₹60,000</p>
+            <p class="price-sub">First 3 clients only</p>
+            <ul>
+              <li>The full Savings Sprint</li>
+              <li>In exchange for an anonymised case study and a reference call</li>
+            </ul>
+            <a class="btn btn-ghost" href="#contact">Ask about a pilot slot</a>
+          </article>
+          <article class="price-card price-card-main">
+            <h3>Savings Sprint</h3>
+            <p class="price">from ₹85,000</p>
+            <p class="price-sub">For teams spending ₹3L+ a month</p>
+            <ul>
+              <li>Cost map and ranked waste list</li>
+              <li>Ready-to-run changes for your top 5–10 workloads</li>
+              <li>Change plan and 30-day re-measure</li>
+              <li>Scope and price fixed after the fit call</li>
+            </ul>
+            <a class="btn" href="#contact">Book a fit call</a>
+          </article>
+          <article class="price-card">
+            <h3>Cost Guard</h3>
+            <p class="price">from ₹40,000<span>/month</span></p>
+            <p class="price-sub">Billed quarterly, after a sprint</p>
+            <ul>
+              <li>Quarterly re-check of your bill</li>
+              <li>Review of new workloads before they get expensive</li>
+              <li>Implementation help credits</li>
+              <li>No on-call</li>
+            </ul>
+            <a class="btn btn-ghost" href="#contact">Talk to us</a>
+          </article>
+        </div>
+        <div class="guarantee">
+          <strong>The guarantee:</strong> if verified savings over 12 months come to less than 3× the sprint fee, we refund 50% of it.
+        </div>
+        <p class="fine">50% at kickoff, 50% on delivery. Prices exclude taxes, if applicable. International teams are billed in USD.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="fit">
+      <div class="wrap">
+        <p class="eyebrow">Who it's for</p>
+        <h2>Built for teams without a FinOps owner</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Startups and scale-ups</h3>
+            <p>Your Databricks bill has started getting your CFO's attention, and your platform team is busy shipping.</p>
+          </article>
+          <article class="card">
+            <h3>Recently migrated companies</h3>
+            <p>You moved to Databricks in the last year or two and the bill is running ahead of the forecast.</p>
+          </article>
+          <article class="card">
+            <h3>Consultancies and MSPs</h3>
+            <p>Your clients run Databricks but you don't have deep cost expertise in-house. Ask about referral and white-label terms.</p>
+          </article>
+        </div>
+        <p class="not-fit"><strong>Not a fit yet?</strong> If you spend under ₹3L a month, start with Databricks' built-in budgets and cost dashboards. A sprint probably won't pay back yet.</p>
+      </div>
+    </section>
+
+    <section class="section" id="security">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Security</p>
+          <h2>Read-only by design</h2>
+          <p class="section-lead">We work on metadata about your platform, not the data inside it.</p>
+        </div>
+        <ul class="checks">
+          <li>NDA signed before any access.</li>
+          <li>Read-only access to billing, compute and job metadata. We never write to production.</li>
+          <li>No customer or business data needed.</li>
+          <li>Your team reviews and executes every change under your own controls.</li>
+          <li>Extracts are deleted at the end of the engagement.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="about">
+      <div class="wrap about">
+        <p class="eyebrow">About</p>
+        <h2>An independent practice</h2>
+        <p>Burnlow is run by a Bengaluru-based senior data engineer with 7+ years building and running data platforms on Databricks, Spark, Azure and AWS. You work directly with the engineer doing the analysis.</p>
+        <p>We don't resell licences or earn commissions from any vendor. Our only incentive is your bill going down.</p>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap faq">
+        <p class="eyebrow">FAQ</p>
+        <h2>Questions teams ask first</h2>
+        <details>
+          <summary>Do you need admin or write access?</summary>
+          <p>No. Read-only access to billing, compute and job metadata is enough. We never change anything in your workspace; your team ships every change.</p>
+        </details>
+        <details>
+          <summary>How much can we expect to save?</summary>
+          <p>It depends on your workloads, so we won't quote a number before looking. After the fit call we'll give you a realistic range, and the guarantee protects you if the result falls short.</p>
+        </details>
+        <details>
+          <summary>How long does it take?</summary>
+          <p>The sprint itself takes two to three weeks. We re-measure 30 days after your team ships the changes.</p>
+        </details>
+        <details>
+          <summary>Who implements the changes?</summary>
+          <p>Your engineers, using our ready-to-run changes and change plan. If you want hands-on help, implementation projects are available at a fixed price.</p>
+        </details>
+        <details>
+          <summary>Are you a Databricks partner?</summary>
+          <p>No. Burnlow is independent and isn't affiliated with or endorsed by Databricks. We don't sell licences, migrations or credits.</p>
+        </details>
+        <details>
+          <summary>Do you work with Snowflake, BigQuery or EMR?</summary>
+          <p>Databricks is our focus. Spark on AWS EMR or Glue is possible on request.</p>
+        </details>
+        <details>
+          <summary>Do you offer on-call or production support?</summary>
+          <p>No. We're an analysis and implementation-support practice, not a managed-service provider.</p>
+        </details>
+        <details>
+          <summary>How do payments work?</summary>
+          <p>50% at kickoff and 50% on delivery, by bank transfer, UPI or card. International teams are billed in USD.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="wrap contact">
+        <div>
+          <p class="eyebrow eyebrow-light">Contact</p>
+          <h2>Book a 20-minute fit call</h2>
+          <p class="section-lead">Tell us roughly what you spend and what you run. We'll reply within two working days with a few times that suit you.</p>
+          <p class="contact-direct">Or email <a href="mailto:hello@burnlow.in">hello@burnlow.in</a></p>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <label for="c-name">Your name</label>
+          <input id="c-name" name="name" type="text" autocomplete="name" required>
+          <label for="c-email">Work email</label>
+          <input id="c-email" name="email" type="email" autocomplete="email" required>
+          <label for="c-company">Company</label>
+          <input id="c-company" name="company" type="text" autocomplete="organization">
+          <label for="c-spend">Monthly Databricks spend</label>
+          <select id="c-spend" name="spend">
+            <option>Not sure</option>
+            <option>Under ₹3 lakh</option>
+            <option>₹3–10 lakh</option>
+            <option>₹10–25 lakh</option>
+            <option>Over ₹25 lakh</option>
+          </select>
+          <label for="c-msg">What's going on? (optional)</label>
+          <textarea id="c-msg" name="message" rows="4"></textarea>
+          <button class="btn" type="submit">Send via email</button>
+          <p class="form-note" id="form-note">This opens your email app with the details filled in. Nothing is stored on this site.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <a class="brand brand-footer" href="./">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#1f2937"/>
+            <path d="M16 4.5c2 4.3 7.4 7.4 7.4 13.6a7.4 7.4 0 0 1-14.8 0c0-3.3 1.8-5.4 3.5-7.1.3 2.1 1.3 3.7 2.9 4.5-.6-4.1-.1-7.7 1-11z" fill="#f97316"/>
+            <path d="M16 15.2v7.2m-3-3 3 3 3-3" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>burnlow</span>
+        </a>
+        <p>Lower burn, same pipelines.<br>Bengaluru, India</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:hello@burnlow.in">hello@burnlow.in</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+    <div class="wrap footer-legal">
+      <p>© <span id="year">2026</span> Burnlow. Databricks is a trademark of Databricks, Inc. Apache Spark is a trademark of the Apache Software Foundation. Burnlow is an independent practice and is not affiliated with or endorsed by either.</p>
+    </div>
+  </footer>
+
+  <script src="assets/main.js" defer></script>
+</body>
+</html>
